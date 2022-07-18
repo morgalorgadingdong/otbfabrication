@@ -1,0 +1,226 @@
+* {
+  --bg-color-light: #D5D4D0;
+  --bg-color-dark:#545456;
+  
+  --color-dark: #545456;
+  --color-mid: rgba(204, 196, 185);
+  --color-light: #ffffff; 
+  --color-selected-primary: #765A33;  
+  --color-selected-secondary: rgba(52,63,49);
+  --main-font: 'Heebo', sans-serif;
+}
+
+/* Additional Styles */
+header > .row > .col-md-12 {
+    background-image: linear-gradient(to right, rgba(255,255,255,.7), rgba(255,255,255,1)), url("../images/logo-mountain-dark-c.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+#landingPageImg {
+    background-image: linear-gradient(rgba(118, 90, 51, 0.5), rgba(0, 0, 0, 0.7)), url("../images/hero-van.JPG");
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding-left: 15vw;
+    padding-right: 20vw; */
+  }
+  
+  .cover-img {
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+  }
+  
+  #landingPageImg > h2 {
+    padding-top: 7vh;
+  } 
+  
+  .color-light {
+    color: var(--color-light)
+  }
+  
+  #heroTextH2 {
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadein 2s; /* Firefox < 16 */
+          -ms-animation: fadein 2s; /* Internet Explorer */
+           -o-animation: fadein 2s; /* Opera < 12.1 */
+              animation: fadein 2s;
+  }
+  
+  #heroTextP {
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+         -moz-animation: fadein 2s; /* Firefox < 16 */
+          -ms-animation: fadein 2s; /* Internet Explorer */
+           -o-animation: fadein 2s; /* Opera < 12.1 */
+              animation: fadein 4s;
+    font-weight: lighter;
+    
+  }
+  
+  nav {
+    padding: 0 100px;
+    filter: none;
+  }
+
+  .nav-title {
+    font-size: 1.8rem;
+    margin-bottom: 0px;
+    background-color: rgb(255, 255, 255, 0.5);
+    box-shadow: 5px 5px 5px 5px rgb(255, 255, 255, 0.5), -5px -5px 5px 5px rgb(255, 255, 255, 0.5);
+  }
+
+  #navbarmenu {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .navbar-brand {
+    background-color: var(--color-selected-secondary);
+    height: 100%;
+  }
+
+  @media (min-width: 1260px) {
+    .navbar-brand {
+      max-width: 40%; } }
+
+  .slanted {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 90% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 0%, 90% 100%, 0 100%); 
+  }
+
+  /* nav > img {
+    height: 100px !important;
+  } */
+
+  /* .nav-link::after{
+    content: "";
+    display: flex;
+    margin: auto;
+    height: 8px;
+    width: 0px;
+    transition: width 1s ease, background-color 1s ease;
+    background-color: var(--color-selected-primary);
+  }
+
+  .nav-link:hover::after{
+    width: 100%;
+  } */
+
+  #header-logo {
+    background-color: var(--color-selected-secondary);
+    height: 8vh;
+  }
+
+  .navbar {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  } 
+
+  .nav-link:hover {
+    border-radius: 5%;
+    background-color: var(--color-mid);
+    transition: background-color 1s;
+  }
+
+  .section-container {
+    padding: 0 150px;
+  }
+
+  p {
+    color: black;
+  }
+
+  #vanBuild1 {
+    background-image: url('../images/vanbuild-1.JPG');
+  }
+
+  #vanBuild2 {
+    background-image: url('../images/vanbuild-2.JPG');
+  }
+
+  #vanBuild3 {
+    background-image: url('../images/vanbuild-10.JPG');
+  }
+
+  .van-card-content {
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: 1 / 1;
+  }
+
+  .van-card-container {
+    padding: 1rem;
+  }
+
+  /* #navLogo{
+    position: absolute;
+    background-image: url('../images/Green\ Circle.jpg');
+    background-position: center;
+    background-size: cover;
+    background-position-x: right;
+    width: 100%;
+    height: ;
+    z-index: 99;
+  } */
+  
+  .circle {
+    border-radius: 50%;
+  }
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: white;
+  }
+
+  .van-card-content:hover .overlay {
+    opacity: .8;
+  }
+
+  .overlay-text {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .bgLight {
+    background-color: var(--color-mid);
+  }
+
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+  /* Firefox < 16 */
+  @-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+  /* Internet Explorer */
+  @-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+  /* Opera < 12.1 */
+  @-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
