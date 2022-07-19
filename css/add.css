@@ -12,7 +12,7 @@
 
 /* Additional Styles */
 header > .row > .col-md-12 {
-    background-image: linear-gradient(to right, rgba(255,255,255,.7), rgba(255,255,255,1)), url("../images/logo-mountain-dark-c.png");
+    background-image: linear-gradient(to right, rgba(255,255,255,.4), rgba(255,255,255,1)), url("../images/logo-mountain-dark-c.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -92,7 +92,7 @@ header > .row > .col-md-12 {
 
   .slanted {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 90% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 0%, 90% 100%, 0 100%); 
+    clip-path: polygon(0 0, 100% 0, 100% 0%, 89.3% 100%, 0 100%); 
   }
 
   /* nav > img {
@@ -122,6 +122,10 @@ header > .row > .col-md-12 {
     margin-left: 0 !important;
     padding-left: 0 !important;
   } 
+
+  .nav-link {
+    font-weight: 600 !important;
+  }
 
   .nav-link:hover {
     border-radius: 5%;
@@ -186,6 +190,10 @@ header > .row > .col-md-12 {
     opacity: .8;
   }
 
+  .partnerLogo:hover .overlay {
+    opacity: .8;
+  }
+
   .overlay-text {
     color: black;
     font-size: 20px;
@@ -194,6 +202,51 @@ header > .row > .col-md-12 {
 
   .bgLight {
     background-color: var(--color-mid);
+  }
+
+  #partner-CFD {
+    background-color: black;
+    background-image: url('../images/partners/partners-CFD.png');
+    background-size: contain;
+  }
+
+  #partner-CampMug {
+    background-color: black;
+    background-image: url('../images/partners/partners-CampMug2.png');
+    background-size: auto;
+  }
+
+  #partner-AutobahnCoffee {
+    background-image: url('../images/partners/partners-AutobahnCoffee.png');
+  }
+
+  #partner-FVC {
+    background-color: black;
+    background-image: url('../images/partners/partners-FVC.png');
+    background-size: contain;
+  }
+
+  #partner-LandedGear {
+    background-image: url('../images/partners/partners-LandedGear');
+  }
+
+  #partner-UBCO {
+    background-image: url('../images/partners/partners-UBCO.PNG');
+    background-size: contain;
+  }
+
+  #partner-AdventureWagon {
+    background-color: #0A1931;
+    background-image: url('../images/partners/partners-AdventureWagon.PNG');
+    background-size: contain;
+  }
+
+  .partnerLogo {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    aspect-ratio: 1 / 1;
+    margin: 2vh auto;
   }
 
   @keyframes fadein {

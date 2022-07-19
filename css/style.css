@@ -2134,8 +2134,9 @@ button {
   color: var(--color-light);
   position: relative; }
   .btn-secondary:hover {
-    background: var(--color-dark);
-    border-color: var(--color-dark); }
+    background: var(--color-mid);
+    border-color: var(--color-mid);
+  color: var(--color-dark); }
     .btn-secondary:hover:not(:disabled):not(.disabled).active {
       background: var(--color-selected-secondary);
       border-color: var(--color-selected-secondary); }
