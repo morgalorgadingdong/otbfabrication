@@ -12,7 +12,7 @@
 
 /* Additional Styles */
 header > .row > .col-md-12 {
-    background-image: linear-gradient(to right, rgba(255,255,255,.4), rgba(255,255,255,1)), url("../images/logo-mountain-dark-c.png");
+    background-image: linear-gradient(to right, rgba(255,255,255, 0.7), rgba(255,255,255,1)), url("../images/logo-mountain-dark-c.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -124,17 +124,13 @@ header > .row > .col-md-12 {
   } 
 
   .nav-link {
-    font-weight: 600 !important;
+    font-weight: 550 !important;
   }
 
   .nav-link:hover {
     border-radius: 5%;
     background-color: var(--color-mid);
     transition: background-color 1s;
-  }
-
-  .section-container {
-    padding: 0 150px;
   }
 
   p {
@@ -153,6 +149,18 @@ header > .row > .col-md-12 {
     background-image: url('../images/vanbuild-10.JPG');
   }
 
+  #vanBuild4 {
+    background-image: url('../images/vanbuild-11.png');
+  }
+
+  #vanBuild5 {
+    background-image: url('../images/vanbuild-12.png');
+  }
+
+  #vanBuild6 {
+    background-image: url('../images/vanbuild-13.png');
+  }
+
   .van-card-content {
     background-position: center;
     background-size: cover;
@@ -161,6 +169,27 @@ header > .row > .col-md-12 {
 
   .van-card-container {
     padding: 1rem;
+  }
+
+
+  
+
+  .section-container {
+    padding: 0 150px;
+  }
+
+  
+
+  @media (max-width: 990px) {
+    .section-container {
+      padding: 0 80px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-container {
+      padding: 0 30px;
+    }
   }
 
   /* #navLogo{
@@ -204,6 +233,14 @@ header > .row > .col-md-12 {
     background-color: var(--color-mid);
   }
 
+  .bgSecondary {
+    background-color: var(--color-selected-secondary);
+  }
+
+  footer {
+    margin-top: -25px;
+  }
+
   #partner-CFD {
     background-color: black;
     background-image: url('../images/partners/partners-CFD.png');
@@ -232,7 +269,8 @@ header > .row > .col-md-12 {
 
   #partner-UBCO {
     background-image: url('../images/partners/partners-UBCO.PNG');
-    background-size: contain;
+    background-size:contain;
+    border: solid black 3px;
   }
 
   #partner-AdventureWagon {
@@ -246,7 +284,16 @@ header > .row > .col-md-12 {
     background-size: cover;
     background-repeat: no-repeat;
     aspect-ratio: 1 / 1;
-    margin: 2vh auto;
+    margin: 2vh 1vw;
+    border-radius: 50%;
+  }
+
+  .btn {
+    width: fit-content;
+  }
+
+  .active {
+    border-bottom: solid 3px var(--color-selected-primary);
   }
 
   @keyframes fadein {

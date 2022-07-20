@@ -3025,10 +3025,12 @@ input[type="radio"]:radio {
   .dropdown-menu > li > a:hover:after {
     text-decoration: underline;
     -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg); } }
+            transform: rotate(-90deg); }}
 
 .place-card-large {
   display: none !important; }
+
+  
 
 @media (max-width: 1199px) {
   .header .container {
