@@ -90,6 +90,10 @@
   .flexGrow1 {
     flex-grow: 1;
   }
+
+  .flexVertical {
+    flex-direction: column;
+  }
   
   /* RELATIVE SIZING */
   .tenth {
@@ -323,7 +327,7 @@
 
   
   footer {
-    height: 125px;
+    
   }
   
   p {

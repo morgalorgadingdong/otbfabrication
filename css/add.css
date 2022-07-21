@@ -215,7 +215,13 @@ header > .row > .col-md-12 {
     background-color: white;
   }
 
-  .van-card-content:hover .overlay {
+  .van-card {
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: 1/1;
+  }
+
+  .van-card:hover .overlay {
     opacity: .8;
   }
 
@@ -239,6 +245,11 @@ header > .row > .col-md-12 {
 
   footer {
     margin-top: -25px;
+  }
+
+  #footerLogo {
+    border-radius: 50%;
+    width: 100%;
   }
 
   #partner-CFD {
