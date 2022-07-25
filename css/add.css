@@ -81,6 +81,10 @@ header > .row > .col-md-12 {
     padding-bottom: 40px;
   }
 
+  .navbar-toggler {
+    margin-right: 15px;
+  }
+
   .navbar-brand {
     background-color: var(--color-selected-secondary);
     height: 100%;
@@ -245,6 +249,14 @@ header > .row > .col-md-12 {
 
   footer {
     margin-top: -25px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  #footerLogoContainer {
+    
   }
 
   #footerLogo {
