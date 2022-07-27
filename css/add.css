@@ -195,6 +195,10 @@ header > .row > .col-md-12 {
     .section-container {
       padding: 0 30px;
     }
+
+    #footerSiteNav{
+      display: none;
+    }
   }
 
   /* #navLogo{
@@ -249,11 +253,15 @@ header > .row > .col-md-12 {
   }
 
   footer {
-    margin-top: -25px;
-    background-image: url('../images/logo-mountain-dark-c-2.png'), linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    /* margin-top: -25px; */
+    /* background-image: url('../images/logo-mountain-dark-c-2.png'), linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
     
+  }
+
+  footer li a h5 {
+    color: var(--color-selected-primary);
   }
 
   li {
@@ -261,12 +269,20 @@ header > .row > .col-md-12 {
   }
 
   #footerLogoContainer {
-    
+    position: absolute;
+    /* height: 200px; */
+    display: flex;
+    justify-content: center;
   }
 
   #footerLogo {
     border-radius: 50%;
     width: 100%;
+    max-width: 300px;
+  }
+
+  footer > .row, .row > .flexVertical {
+    height: 300px;
   }
 
   #partner-CFD {
@@ -321,8 +337,12 @@ header > .row > .col-md-12 {
     width: fit-content;
   }
 
+  #curator-feed-test-feed-layout {
+    background-color: black;
+  }
+
   .active {
-    border-bottom: solid 3px var(--color-selected-primary);
+    border-bottom: solid 3px var(--color-selected-secondary);
   }
 
   @keyframes fadein {
