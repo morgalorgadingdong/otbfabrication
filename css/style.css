@@ -2606,8 +2606,8 @@ input[type="radio"]:radio {
   padding: 0px 0px;
   margin-right: 0; }
 
-.navbar-brand img {
-  height: 36px; }
+/* .navbar-brand img {
+  height: 36px; } */
 
 .navbar .navbar-brand {
   color: var(--color-light);

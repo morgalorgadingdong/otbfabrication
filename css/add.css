@@ -120,6 +120,7 @@ header > .row > .col-md-12 {
   #header-logo {
     background-color: var(--color-selected-secondary);
     height: 8vh;
+    max-height: 80px;
   }
 
   .navbar {
@@ -249,6 +250,10 @@ header > .row > .col-md-12 {
 
   footer {
     margin-top: -25px;
+    background-image: url('../images/logo-mountain-dark-c-2.png'), linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    background-position: center;
+    background-size: cover;
+    
   }
 
   li {
@@ -273,7 +278,7 @@ header > .row > .col-md-12 {
   #partner-CampMug {
     background-color: black;
     background-image: url('../images/partners/partners-CampMug2.png');
-    background-size: auto;
+    background-size: contain;
   }
 
   #partner-AutobahnCoffee {
@@ -309,6 +314,7 @@ header > .row > .col-md-12 {
     aspect-ratio: 1 / 1;
     margin: 2vh 1vw;
     border-radius: 50%;
+    width: 100%;
   }
 
   .btn {
