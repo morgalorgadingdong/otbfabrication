@@ -166,13 +166,13 @@ header > .row > .col-md-12 {
     background-image: url('../images/vanbuild-13.png');
   }
 
-  .van-card-content {
+  /* .card-content {
     background-position: center;
     background-size: cover;
     aspect-ratio: 1 / 1;
-  }
+  } */
 
-  .van-card-container {
+  .card-container {
     padding: 1rem;
   }
 
@@ -224,13 +224,14 @@ header > .row > .col-md-12 {
     background-color: white;
   }
 
-  .van-card {
+  .card {
     background-position: center;
     background-size: cover;
     aspect-ratio: 1/1;
+    border: none;
   }
 
-  .van-card:hover .overlay {
+  .card:hover .overlay {
     opacity: .8;
   }
 
