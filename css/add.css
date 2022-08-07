@@ -119,6 +119,8 @@ header > .row > .col-md-12 {
 
   #header-logo {
     background-color: var(--color-selected-secondary);
+    max-width: 75%;
+    aspect-ratio: 1108 / 199;
     height: 8vh;
     max-height: 80px;
   }
