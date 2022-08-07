@@ -109,3 +109,8 @@
     input.form-control.col-4, select.form-control.col-4 {
       width: 33%;
     }
+
+
+    .modal-content ul {
+      padding: 1rem
+    }

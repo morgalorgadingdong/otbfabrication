@@ -200,10 +200,6 @@ const form = document.querySelector('form');
 
 form.addEventListener('input', updateTotal);
 
-// document.getElementsByClassName('qty').addEventListener('change', updateTotal(this.value))
-
-// let qtyInputs = document.getElementsByClassName('qty')
-// qtyInputs.addEventListener('change', updateTotal('Coffee Cup', this.value))
 
 function updateTotal() {
   let quantities = document.getElementsByTagName("input");
