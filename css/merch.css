@@ -23,7 +23,7 @@
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 5; /* Sit on top */
+    /* z-index: 5; */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -49,6 +49,7 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
+    text-align: end;
   }
   
   .close:hover,
@@ -104,3 +105,7 @@
   
   input.orderFormItem {
     height: 50px; }
+
+    input.form-control.col-4, select.form-control.col-4 {
+      width: 33%;
+    }
