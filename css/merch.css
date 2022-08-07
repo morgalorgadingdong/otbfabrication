@@ -76,6 +76,10 @@
     margin-bottom: 0;
   }
 
+  #orderForm .textLeft {
+    border-bottom: var(--color-dark) solid 2px;
+  }
+
 
   .orderFormItem {
     border: 1px solid #e7e7e7;
@@ -88,7 +92,7 @@
     color: var(--color-dark);
     background-clip: inherit !important;
     background: #f6f6f6;
-    border-radius: 50px; }
+    border-radius: 10px; }
     .orderFormItem:focus {
       -webkit-box-shadow: none;
               box-shadow: none;
@@ -107,7 +111,7 @@
     height: 50px; }
 
     input.form-control.col-4, select.form-control.col-4 {
-      width: 33%;
+      width: 31%;
     }
 
 

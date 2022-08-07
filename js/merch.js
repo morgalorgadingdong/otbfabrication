@@ -1,26 +1,46 @@
 // Get the modal
-var modal = document.getElementById("modal-shopShirt");
+let modalShopShirt = document.getElementById("modal-shopShirt");
+let modalCoffeeCup = document.getElementById("modal-coffeeCup");
+let modalStickerPack = document.getElementById("modal-stickerPack");
 
 // Get the button that opens the modal
-var btn = document.getElementById("merch-shopShirt-container");
+let btnShopShirt = document.getElementById("merch-shopShirt-container");
+let btnCoffeeCup = document.getElementById("merch-coffeeCup-container");
+let btnStickerPack = document.getElementById("merch-stickerPack-container");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+let spanShopShirt = document.getElementsByClassName("close")[0];
+let spanCoffeeCup = document.getElementsByClassName("close")[1];
+let spanStickerPack = document.getElementsByClassName("close")[2];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
+btnShopShirt.onclick = function() {
+  modalShopShirt.style.display = "block";
+}
+btnCoffeeCup.onclick = function() {
+  modalCoffeeCup .style.display = "block";
+}
+btnStickerPack.onclick = function() {
+  modalStickerPack.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+spanShopShirt.onclick = function() {
+  modalShopShirt.style.display = "none";
+}
+spanCoffeeCup.onclick = function() {
+  modalCoffeeCup.style.display = "none";
+}
+spanStickerPack.onclick = function() {
+  modalStickerPack.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == modalShopShirt || event.target == modalCoffeeCup || event.target == modalStickerPack) {
+    modalShopShirt.style.display = "none";
+    modalCoffeeCup.style.display = "none";
+    modalStickerPack.style.display = "none";
   }
 }
 
@@ -91,7 +111,7 @@ function createShopShirtItem() {
   qtyContainer.appendChild(qtyLabel)
   qtyContainer.appendChild(qty)
   outerContainer.appendChild(close)
-  modal.style.display = "none"
+  modalShopShirt.style.display = "none"
   updateTotal('Shop Shirt', 1)
 }
 
@@ -107,7 +127,6 @@ function createCoffeeCupItem() {
   qtyLabel.setAttribute('for', 'qty')
   let qty = document.createElement('input')
   qtyLabel.setAttribute('for', 'qty')
-  // qty.value = 1
   Object.assign(qty, {
     type: 'number',
     id: '',
@@ -118,7 +137,6 @@ function createCoffeeCupItem() {
     class: 'qty',
     step: '1'
   })
-  // qty.required = true
   let close = document.createElement('span')
   close.classList.add('close')
   close.innerHTML='&times;'
@@ -129,7 +147,7 @@ function createCoffeeCupItem() {
   qtyContainer.appendChild(qtyLabel)
   qtyContainer.appendChild(qty)
   outerContainer.appendChild(close)
-  // qty.setAttribute("onchange", updateTotal('Coffee Cup', this.value))
+  modalCoffeeCup.style.display = "none"
   updateTotal('Coffee Cup', 1)
 }
 
@@ -166,6 +184,7 @@ function createStickerPackItem() {
   qtyContainer.appendChild(qtyLabel)
   qtyContainer.appendChild(qty)
   outerContainer.appendChild(close)
+  modalStickerPack.style.display = "none"
   updateTotal('Sticker Pack', 1)
 }
 

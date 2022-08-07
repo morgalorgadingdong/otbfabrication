@@ -78,7 +78,7 @@ header -->
             </div>
           </div>
         </div>
-        <div class="card-container col-lg-3 col-md-3 col-sm-6 col-12" style="cursor: pointer;">
+        <div id="merch-coffeeCup-container" class="card-container col-lg-3 col-md-3 col-sm-6 col-12" style="cursor: pointer;">
           <div id="merch-coffeeCup" class="oneHundo card">
             <div class="overlay flexVertical flexCenterH">
               <p class="overlay-text text-center oneHundo">OTB Coffee Cup</p>
@@ -94,7 +94,7 @@ header -->
             </div>
           </div>
         </div>
-        <div class="card-container col-lg-3 col-md-3 col-sm-6 col-12" style="cursor: pointer;">
+        <div id="merch-stickerPack-container" class="card-container col-lg-3 col-md-3 col-sm-6 col-12" style="cursor: pointer;">
           <div id="merch-stickerPack" class="oneHundo card">
             <div class="overlay flexVertical flexCenterH">
               <p class="overlay-text text-center oneHundo">OTB Sticker Pack</p>
@@ -128,7 +128,7 @@ header -->
         <form>
           <div id="orderForm">
 
-          
+          <h6 class="textLeft">Your Info</h6>
           <div class="mb-3">
             <input type="text" class="form-control" placeholder="Name" required>
           </div>
@@ -141,7 +141,7 @@ header -->
           <div class="mb-3">
             <input type="text" class="form-control" placeholder="Address line 2">
           </div>
-          <div class="mb-3 flexCenterH">
+          <div class="mb-3 flexSpaceBetweenH">
             <input type="text" class="form-control col-4" placeholder="City" required>
             <select type="text" class="form-control col-4" placeholder="State" required>
               <option value="0">State</option>
@@ -200,6 +200,7 @@ header -->
             <input type="text" class="form-control col-4" placeholder="Zip" required>
           </div>
 
+          <h6 class="textLeft">Your Order</h6>
 
           <!-- <div id="" class="mb-3 orderFormItem flexCenterV flexSpaceBetweenH">
               <p class="orderFormElement" >Shop Shirt - $45</p>
@@ -232,9 +233,9 @@ header -->
           
 
         </div>
-        <div class="mb-3 oneHundo flexCenterH">            
-          <p>Total $</p>
-          <p id="orderFormTotal">0</p>
+        <div class="my-3 oneHundo flexCenterH">            
+          <h6>Total $</h6>
+          <h6 id="orderFormTotal">0</h6>
         </div>
           <div class="mb-3 flexCenterH">
             <select class="form-control orderFormElement" id="addItemButton" onchange="addItem(this)">
@@ -259,8 +260,9 @@ header -->
 </section>
 
 
+
+<!-- MODALS -->
 <div id="modal-shopShirt" class="modal">
-  <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
     <div class="flexLeft flexWrap">
@@ -278,9 +280,49 @@ header -->
       </div> 
       </div>
     </div>
-    
   </div>
 </div>
+
+<div id="modal-coffeeCup" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="flexLeft flexWrap">
+      <div id="merch-coffeeCup" class="col-12 col-md-4 modal-merch-img"></div>
+      <div class="col-12 col-md-6 px-3 py-5">
+        <h3 class="oneHundo">Coffee Cup - $25</h3>
+        <hr class="oneHundo"/>
+        <ul>
+          <li><p>Hand painted coffee cups by our buddies at Camp supply Mug.</p></li>
+          <li><p>Use the ordering form at the bottom of the Merchandise page to order.</p></li>
+        </ul>
+        <div class="col-12 flexCenterH">
+          <button type="" class="btn btn-primary" onclick="createCoffeeCupItem()">Add to order form</button>
+      </div> 
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-stickerPack" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="flexLeft flexWrap">
+      <div id="merch-stickerPack" class="col-12 col-md-4 modal-merch-img"></div>
+      <div class="col-12 col-md-6 px-3 py-5">
+        <h3 class="oneHundo">Sticker Pack - $5</h3>
+        <hr class="oneHundo"/>
+        <ul>
+          <li><p>Stickers. They stick to stuff. Place them on things so people know how cool you are.</p></li>
+          <li><p>Use the ordering form at the bottom of the Merchandise page to order.</p></li>
+        </ul>
+        <div class="col-12 flexCenterH">
+          <button type="" class="btn btn-primary" onclick="createStickerPackItem()">Add to order form</button>
+      </div> 
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <div id="curator-feed-test-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div><!-- The Javascript can be moved to the end of the html page before the </body> tag --><script type="text/javascript">
     /* curator-feed-test-feed-layout */

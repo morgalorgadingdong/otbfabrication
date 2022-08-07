@@ -185,6 +185,9 @@ header > .row > .col-md-12 {
     padding: 0 150px;
   }
 
+  .form-control {
+    border-radius: 10px;
+  }
   
 
   @media (max-width: 990px) {
