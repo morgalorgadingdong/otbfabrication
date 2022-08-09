@@ -81,6 +81,10 @@ header > .row > .col-md-12 {
     padding-bottom: 40px;
   }
 
+  .nav-link:hover {
+    border-bottom: ;
+  }
+
   .navbar-toggler {
     margin-right: 15px;
   }
@@ -121,7 +125,7 @@ header > .row > .col-md-12 {
     background-color: var(--color-selected-secondary);
     max-width: 75%;
     aspect-ratio: 1108 / 199;
-    height: 8vh;
+    height: 7vh;
     max-height: 80px;
   }
 
@@ -136,36 +140,14 @@ header > .row > .col-md-12 {
 
   .nav-link:hover {
     border-radius: 5%;
-    background-color: var(--color-mid);
-    transition: background-color 1s;
+    /* border-bottom: solid 3px var(--color-selected-secondary); */
+    /* transition: border-bottom 1s; */
+    /* background-color: var(--color-mid);
+    transition: background-color 1s; */
   }
 
   p {
     color: black;
-  }
-
-  #vanBuild1 {
-    background-image: url('../images/vanbuild-1.JPG');
-  }
-
-  #vanBuild2 {
-    background-image: url('../images/vanbuild-2.JPG');
-  }
-
-  #vanBuild3 {
-    background-image: url('../images/vanbuild-10.JPG');
-  }
-
-  #vanBuild4 {
-    background-image: url('../images/vanbuild-11.png');
-  }
-
-  #vanBuild5 {
-    background-image: url('../images/vanbuild-12.png');
-  }
-
-  #vanBuild6 {
-    background-image: url('../images/vanbuild-13.png');
   }
 
   /* .card-content {
@@ -327,6 +309,13 @@ header > .row > .col-md-12 {
     background-color: #0A1931;
     background-image: url('../images/partners/partners-AdventureWagon.PNG');
     background-size: contain;
+  }
+
+  #partner-GiddyUp {
+    box-sizing: border-box;
+    background-image: url('../images/partners/Asset\ 11.svg');
+    background-size: contain;
+    border: #0A1931 solid 3px;
   }
 
   .partnerLogo {

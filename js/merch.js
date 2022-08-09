@@ -28,6 +28,7 @@ btnStickerPack.onclick = function() {
 spanShopShirt.onclick = function() {
   modalShopShirt.style.display = "none";
 }
+
 spanCoffeeCup.onclick = function() {
   modalCoffeeCup.style.display = "none";
 }

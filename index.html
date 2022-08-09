@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet" rel="preload">
 
     <!-- CSS Global Compulsory (Do not remove)-->
     <link rel="stylesheet" href="css/font-awesome/all.min.css" />
@@ -27,10 +27,11 @@
     <link rel="stylesheet" href="css/swiper/swiper.min.css" />
     <link rel="stylesheet" href="css/animate/animate.min.css"/>
 
-    <!-- Template Style -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/bws.css" />
     <link rel="stylesheet" href="css/add.css" />
+    <link rel="stylesheet" href="css/builds.css" />
 
   </head>
 
@@ -114,7 +115,7 @@ header -->
         <div class="col-md-4 col-sm-12 p-3 text-center">
           <img src="images/icons/icon-check.svg"/>
           <h4>Experienced</h4>
-          <h6>Our team brings a wide range of experience to the table, from custom home cabnitry, to boat building, to building custom vans for ourselves; we have the know-how to get the job done.</p>
+          <h6>Our team brings a wide range of experience to the table, from building cabinets for multimillion dollar homes, to boat building, to building custom vans for ourselves; we have the tools and the know-how to get the job done.</p>
         </div>
         <div class="col-md-4 col-sm-12 p-3 text-center">
           <img src="images/icons/icon-diamond.svg"/>
@@ -183,10 +184,11 @@ header -->
   <div class="row section-container flexCenterH">
     <h2 class="oneHundo py-4 mt-1 whiteText">Our Work</h2>
     <div class="flexWrap">
-      <div class="card-container col-lg-3 col-md-4 col-sm-6 col-12" style="cursor: pointer;">
+      <div class="card-container col-lg-3 col-md-4 col-sm-6 col-12" style="cursor: pointer;" onclick="location.href='builds/build1.html';">
         <div id="vanBuild1" class="oneHundo card">
-          <div class="overlay flexCenterV">
-            <p class="overlay-text text-center oneHundo">Hey we built this van</p>
+          <div class="overlay flexColumn flexCenterH flexCenterH flexWrap">
+            <p class="overlay-text text-center oneHundo">Ford Econoline build</p>
+            <span class="tag"><p>interior buildout</p><p>layout design</p><p>awning install</p></span>
           </div>
         </div>
       </div>
@@ -212,14 +214,7 @@ header -->
         </div>
       </div>
       <div class="card-container col-lg-3 col-md-4 col-sm-6 col-12" style="cursor: pointer;">
-        <div class="card mb-4" id="vanBuild5" style="cursor: pointer;">
-          <div class="overlay flexCenterV">
-            <p class="overlay-text text-center oneHundo">Hey we built this van</p>
-          </div>
-        </div>
-      </div>
-      <div class="card-container col-lg-3 col-md-4 col-sm-6 col-12" style="cursor: pointer;">
-        <div id="vanBuild6" class="oneHundo card">
+        <div id="vanBuild8" class="oneHundo card">
           <div class="overlay flexCenterV">
             <p class="overlay-text text-center oneHundo">Send me pix Buzz</p>
           </div>
@@ -273,6 +268,11 @@ header -->
     <a class="col-lg-3 col-md-4 col-sm-6 col-12 p-3" href="https://adventurewagon.com/" target="_blank"><div id="partner-AdventureWagon" class="partnerLogo">
       <div class="overlay flexCenterV">
         <p class="overlay-text text-center oneHundo">Adventure Wagon</p>
+      </div>
+    </div></a>
+    <a class="col-lg-3 col-md-4 col-sm-6 col-12 p-3" href="https://adventurewagon.com/" target="_blank"><div id="partner-GiddyUp" class="partnerLogo">
+      <div class="overlay flexCenterV">
+        <p class="overlay-text text-center oneHundo">GiddyUp Web Design</p>
       </div>
     </div></a>
     <!-- <a class="col-md-3" href="https://landedgear.com/" target="_blank"><div id="partner-LandedGear" class="partnerLogo">
