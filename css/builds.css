@@ -21,7 +21,7 @@
   .tag {
     margin: 5px;
     line-height: 2rem;
-    height: 2rem;
+    height: auto;
     cursor: default;
     text-align: center;
     width: 100%;
