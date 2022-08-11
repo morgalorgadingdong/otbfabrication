@@ -1,3 +1,6 @@
+const shopShirtPrice = 45;
+const coffeeCupPrice = 25;
+
 // Get the modal
 let modalShopShirt = document.getElementById("modal-shopShirt");
 let modalCoffeeCup = document.getElementById("modal-coffeeCup");
@@ -62,10 +65,7 @@ function addItem(element) {
 }
 
 
-let total = 0;
-const shopShirtPrice = 45;
-const coffeeCupPrice = 25;
-const stickerPackPrice = 5;
+// const stickerPackPrice = 5;
 
 document.getElementById('orderFormTotal').innerHTML = total
 
@@ -73,23 +73,24 @@ function createShopShirtItem() {
   let outerContainer = document.createElement('div')
   outerContainer.classList.add('mb-3', 'orderFormItem', 'flexCenterV', 'flexSpaceBetweenH')
   let p = document.createElement('p')
-  p.classList.add('orderFormElement')
-  p.innerHTML = `Shop Shirt - $${shopShirtPrice}`
+  p.classList.add('orderFormElement','itemLabel')
+  p.innerHTML = `Shop Shirt - ${shopShirtPrice}`
   let select = document.createElement('select')
-  const arr = ['- size -', 'Small', 'Medium', 'Large', 'XL']
+  const arr = ['- size -', 'Small', 'Medium', 'Large']
   for (const [index, a] of arr.entries()) {
     const opt = document.createElement('option');
     opt.value = a;
     opt.innerHTML = a;
     select.appendChild(opt);
   }
-  select.classList.add('orderFormElement')
+  select.classList.add('orderFormElement', 'itemOption')
   select.required = true;
   let qtyContainer = document.createElement('div')
   let qtyLabel = document.createElement('label')
   qtyLabel.innerHTML = 'Qty'
   qtyLabel.setAttribute('for', 'qty')
   let qty = document.createElement('input')
+  qty.classList.add('itemQuantity')
   qtyLabel.setAttribute('for', 'qty')
   Object.assign(qty, {
     type: 'number',
@@ -120,13 +121,23 @@ function createCoffeeCupItem() {
   let outerContainer = document.createElement('div')
   outerContainer.classList.add('mb-3', 'orderFormItem', 'flexCenterV', 'flexSpaceBetweenH')
   let p = document.createElement('p')
-  p.classList.add('orderFormElement')
-  p.innerHTML = `Coffee Cup - $${coffeeCupPrice}`
+  p.classList.add('orderFormElement','itemLabel')
+  p.innerHTML = `Coffee Cup - ${coffeeCupPrice}`
+  let select = document.createElement('select')
+  const arr = ['- color -', 'Black', 'White']
+  for (const [index, a] of arr.entries()) {
+    const opt = document.createElement('option');
+    opt.value = a;
+    opt.innerHTML = a;
+    select.appendChild(opt);
+  }
+  select.classList.add('orderFormElement', 'itemOption')
   let qtyContainer = document.createElement('div')
   let qtyLabel = document.createElement('label')
   qtyLabel.innerHTML = 'Qty'
   qtyLabel.setAttribute('for', 'qty')
   let qty = document.createElement('input')
+  qty.classList.add('itemQuantity')
   qtyLabel.setAttribute('for', 'qty')
   Object.assign(qty, {
     type: 'number',
@@ -135,7 +146,6 @@ function createCoffeeCupItem() {
     min: '1',
     max: '10',
     value: '1',
-    class: 'qty',
     step: '1'
   })
   let close = document.createElement('span')
@@ -144,6 +154,7 @@ function createCoffeeCupItem() {
   close.setAttribute('onclick','removeItem(event)')
   document.getElementById('orderForm').appendChild(outerContainer)
   outerContainer.appendChild(p)
+  outerContainer.appendChild(select)
   outerContainer.appendChild(qtyContainer)
   qtyContainer.appendChild(qtyLabel)
   qtyContainer.appendChild(qty)
@@ -156,14 +167,14 @@ function createStickerPackItem() {
   let outerContainer = document.createElement('div')
   outerContainer.classList.add('mb-3', 'orderFormItem', 'flexCenterV', 'flexSpaceBetweenH')
   let p = document.createElement('p')
-  p.classList.add('orderFormElement')
-  p.innerHTML = `Sticker Pack - $${stickerPackPrice}`
+  p.classList.add('orderFormElement','itemLabel')
+  p.innerHTML = `Sticker Pack - ${stickerPackPrice}`
   let qtyContainer = document.createElement('div')
   let qtyLabel = document.createElement('label')
   qtyLabel.innerHTML = 'Qty'
   qtyLabel.setAttribute('for', 'qty')
   let qty = document.createElement('input')
-  qtyLabel.setAttribute('for', 'qty')
+  qty.classList.add('itemQuantity')
   Object.assign(qty, {
     type: 'number',
     id: '',
@@ -197,24 +208,6 @@ function removeItem(e) {
   updateTotal();
 }
 
-// function getItemPrice(e) {
-//   console.log('tests')
-//   let target = e.target
-  
-//   switch (target.innerHTML) {
-//     case 'Shop Shirt':
-//       target.innerHTML = `${target.innerHTML} - ${shopShirtPrice}`
-      
-//       break;
-//     case 'Coffee Cup':
-//       target.innerHTML = `${target.innerHTML} - ${coffeeCupPrice}`
-//       break;
-//     case 'Sticker Pack':
-//       target.innerHTML = `${target.innerHTML} - ${stickerPackPrice}`
-//       break;
-//   }
-// }
-
 
 
 const form = document.querySelector('form');
@@ -225,7 +218,7 @@ form.addEventListener('input', updateTotal);
 function updateTotal() {
   let quantities = document.getElementsByTagName("input");
   console.log(quantities.length)
-  total = 0;
+  let total = 0;
   let increment = 0;
   let qty = 0
   for (let i = 0; i < quantities.length; i++) {
@@ -241,12 +234,63 @@ function updateTotal() {
           total += qty * increment
 
           break;
-        case 'stickerPackQty':
-          increment = stickerPackPrice
-          qty = quantities[i].value
-          total += qty * increment
-          break;
+        // case 'stickerPackQty':
+        //   increment = stickerPackPrice
+        //   qty = quantities[i].value
+        //   total += qty * increment
+        //   break;
       }
   }
+  console.log(shopShirtPrice)
   document.getElementById('orderFormTotal').innerHTML = total
 };
+
+function submitForm() {
+  let items = document.getElementsByClassName('orderFormItem')
+  for (let i = 0; i < items.length; i++) {
+    let item = items[i]
+    console.log(item)
+    let qty = item.querySelector('.itemQuantity').value
+    let input
+    switch (item.querySelector('.itemQuantity').name) {
+      case (`shopShirtQty`):
+        let size = item.querySelector('.itemOption').value;
+        switch (size) {
+          case ('Small'):
+            input = document.getElementById('hiddenShopShirtS');
+            input.value = qty;
+            // console.log(input)
+            break;
+          case ('Medium'):
+            input = document.getElementById('hiddenShopShirtM');
+            input.value = qty;
+            break;
+          case ('Large'):
+            input = document.getElementById('hiddenShopShirtL');
+            input.value = qty;
+            break;
+            case ('- size -'):
+              return alert('Please select a size for your shop shirt(s)')
+        }
+      break;
+      case (`coffeeCupQty`):
+        let color = item.querySelector('.itemOption').value;
+        switch (color) {
+          case ('Black'):
+            input = document.getElementById('hiddenCoffeeCupBlack');
+            input.value = qty;
+            // console.log(input)
+            break;
+          case ('White'):
+            input = document.getElementById('hiddenCoffeeCupWhite');
+            input.value = qty;
+            break;
+          case ('- color -'):
+            return alert('Please select a color for your coffee cup(s)')
+        }
+      break;
+
+    }
+  }
+  document.getElementById('merchFormSubmit').click();
+}

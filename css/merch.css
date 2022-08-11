@@ -118,3 +118,7 @@
     .modal-content ul {
       padding: 1rem
     }
+
+    .hidden {
+      display: none;
+    }

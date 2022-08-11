@@ -94,14 +94,14 @@ header -->
             </div>
           </div>
         </div> -->
-        <div id="merch-stickerPack-container" class="card-container col-lg-3 col-md-3 col-sm-6 col-12" style="cursor: pointer;">
+        <!-- <div id="merch-stickerPack-container" class="card-container col-lg-3 col-md-3 col-sm-6 col-12" style="cursor: pointer;">
           <div id="merch-stickerPack" class="oneHundo card">
             <div class="overlay flexVertical flexCenterH">
               <p class="overlay-text text-center oneHundo">OTB Sticker Pack</p>
               <p class="overlay-text text-center oneHundo">$ 10</p>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- <div class="card-container col-lg-3 col-md-4 col-sm-6 col-12" style="cursor: pointer;">
           <div id="merch-hoodie" class="oneHundo card">
             <div class="overlay flexVertical flexCenterH">
@@ -124,7 +124,7 @@ header -->
     </div>
     <div class="row justify-content-center text-center mt-5 pb-5">
       <div class="col-lg-6">
-        <form id="merchForm" method="POST" netlify>
+        <form id="merchForm">
           <div id="orderForm">
 
           <h6 class="textLeft">Your Info</h6>
@@ -229,8 +229,6 @@ header -->
             <span class="close" onclick="removeItem(event)">&times;</span>
           </div> -->
 
-          
-
         </div>
         <div class="my-3 oneHundo flexCenterH">            
           <h6>Total $</h6>
@@ -242,14 +240,32 @@ header -->
               <option value="shopShirt" onload="getItemPrice(this)">Shop Shirt</option>
               <!-- <option value="tShirt" onload="getItemPrice(this)">T shirt</option> -->
               <option value="coffeeCup" onload="getItemPrice(this)">Coffee Cup</option>
-              <option value="stickerPack" onload="getItemPrice(this)">Sticker Pack</option>
+              <!-- <option value="stickerPack" onload="getItemPrice(this)">Sticker Pack</option> -->
             </select>
           </div>
           
           
           <div class="d-grid flexCenterH">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="" class="btn btn-primary" onclick="submitForm()">Submit</button>
           </div>
+        </form>
+        <button class="btn btn-primary" onclick="submitForm()">Test</button>
+        <form class="hidden" method="POST" netlify>
+          <label>name<input type="text" name="name" id="hiddenName"/></label>
+          <label>email<input type="email" name="email" id="hiddenemail"/></label>
+          <label>Adress Line 1<input type="text" name="Address Line 1" id="hiddenAdd1"/></label>
+          <label>Adress Line 2<input type="text" name="Address Line 2" id="hiddenAdd2"/></label>
+          <label>City<input type="text" name="city" id="hiddenCity"/></label>
+          <label>State<input type="text" name="state" id="hiddenState"/></label>
+          <label>Zip<input type="text" name="zip" id="hiddenZip"/></label>
+          <label>Shop Shirts - S<input type="number" name="shopShirtS" id="hiddenShopShirtS"/></label>
+          <label>Shop Shirts - M<input type="number" name="shopShirtM" id="hiddenShopShirtM"/></label>
+          <label>Shop Shirts - L<input type="number" name="shopShirtL" id="hiddenShopShirtL"/></label>
+          <label>Coffee Cup - Black<input type="number" name="coffeeCupBlack" id="hiddenCoffeeCupBlack"/></label>
+          <label>Coffee Cup - White<input type="number" name="coffeeCupWhite" id="hiddenCoffeeCupWhite"/></label>
+          <!-- <label>Sticker Pack<input type="number" name="stickerPack" id="hiddenStickerPack"/></label> -->
+          <label>Total<input type="number" name="hiddenOrderFormTotal" id="hiddenOrderFormTotal"/></label>
+          <button id="merchFormSubmit" type="submit" class="btn btn-primary"></button>
         </form>
       </div>
     </div>
