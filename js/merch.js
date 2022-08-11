@@ -113,7 +113,7 @@ function createShopShirtItem() {
   qtyContainer.appendChild(qty)
   outerContainer.appendChild(close)
   modalShopShirt.style.display = "none"
-  updateTotal('Shop Shirt', 1)
+  updateTotal()
 }
 
 function createCoffeeCupItem() {
@@ -149,7 +149,7 @@ function createCoffeeCupItem() {
   qtyContainer.appendChild(qty)
   outerContainer.appendChild(close)
   modalCoffeeCup.style.display = "none"
-  updateTotal('Coffee Cup', 1)
+  updateTotal()
 }
 
 function createStickerPackItem() {
@@ -186,14 +186,15 @@ function createStickerPackItem() {
   qtyContainer.appendChild(qty)
   outerContainer.appendChild(close)
   modalStickerPack.style.display = "none"
-  updateTotal('Sticker Pack', 1)
+  updateTotal()
 }
 
 
 
 function removeItem(e) {
-  let target = e.target
-  target.parentNode.remove()
+  let target = e.target;
+  target.parentNode.remove();
+  updateTotal();
 }
 
 // function getItemPrice(e) {
