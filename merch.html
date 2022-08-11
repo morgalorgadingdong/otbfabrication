@@ -251,20 +251,20 @@ header -->
         </form>
         <button class="btn btn-primary" onclick="submitForm()">Test</button>
         <form class="hidden" method="POST" netlify>
-          <label>name<input type="text" name="name" id="hiddenName"/></label>
-          <label>email<input type="email" name="email" id="hiddenemail"/></label>
-          <label>Adress Line 1<input type="text" name="Address Line 1" id="hiddenAdd1"/></label>
-          <label>Adress Line 2<input type="text" name="Address Line 2" id="hiddenAdd2"/></label>
-          <label>City<input type="text" name="city" id="hiddenCity"/></label>
-          <label>State<input type="text" name="state" id="hiddenState"/></label>
-          <label>Zip<input type="text" name="zip" id="hiddenZip"/></label>
+          <label>name<input type="text" name="name" id="hiddenName" required/></label>
+          <label>email<input type="email" name="email" id="hiddenemail" required/></label>
+          <label>Adress Line 1<input type="text" name="Address Line 1" id="hiddenAdd1" required/></label>
+          <label>Adress Line 2<input type="text" name="Address Line 2" id="hiddenAdd2" required/></label>
+          <label>City<input type="text" name="city" id="hiddenCity" required/></label>
+          <label>State<input type="text" name="state" id="hiddenState" required/></label>
+          <label>Zip<input type="text" name="zip" id="hiddenZip" required/></label>
           <label>Shop Shirts - S<input type="number" name="shopShirtS" id="hiddenShopShirtS"/></label>
           <label>Shop Shirts - M<input type="number" name="shopShirtM" id="hiddenShopShirtM"/></label>
           <label>Shop Shirts - L<input type="number" name="shopShirtL" id="hiddenShopShirtL"/></label>
           <label>Coffee Cup - Black<input type="number" name="coffeeCupBlack" id="hiddenCoffeeCupBlack"/></label>
           <label>Coffee Cup - White<input type="number" name="coffeeCupWhite" id="hiddenCoffeeCupWhite"/></label>
           <!-- <label>Sticker Pack<input type="number" name="stickerPack" id="hiddenStickerPack"/></label> -->
-          <label>Total<input type="number" name="hiddenOrderFormTotal" id="hiddenOrderFormTotal"/></label>
+          <label>Total<input type="number" name="total" id="hiddenOrderFormTotal"/></label>
           <button id="merchFormSubmit" type="submit" class="btn btn-primary"></button>
         </form>
       </div>

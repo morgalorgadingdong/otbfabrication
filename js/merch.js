@@ -292,5 +292,9 @@ function submitForm() {
 
     }
   }
+  let total = document.getElementById('orderFormTotal').value
+  if (total == 0) {return alert('Please add items to your form before submitting')}
+  document.getElementById('hiddenOrderFormTotal').value = total
+  
   document.getElementById('merchFormSubmit').click();
 }
