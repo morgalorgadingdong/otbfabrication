@@ -129,20 +129,20 @@ header -->
 
           <h6 class="textLeft">Your Info</h6>
           <div class="mb-3">
-            <input id="formName" type="text" class="form-control" placeholder="Name" required>
+            <input id="formName" name="name" type="text" class="form-control" placeholder="Name" required>
           </div>
           <div class="mb-3">
-            <input id="formEmail" type="email" class="form-control" placeholder="Email" required>
+            <input id="formEmail" name="email" type="email" class="form-control" placeholder="Email" required>
           </div>
           <div class="mb-3">
-            <input id="formAdd1" type="text" class="form-control" placeholder="Address line 1" required>
+            <input id="formAdd1" name="addressLine1" type="text" class="form-control" placeholder="Address line 1" required>
           </div>
           <div class="mb-3">
-            <input id="formAdd2" type="text" class="form-control" placeholder="Address line 2">
+            <input id="formAdd2" name="addressLine2" type="text" class="form-control" placeholder="Address line 2">
           </div>
           <div class="mb-3 flexSpaceBetweenH">
-            <input id="formCity" type="text" class="form-control col-4" placeholder="City" required>
-            <select id="formState" type="text" class="form-control col-4" placeholder="State" required>
+            <input id="formCity" type="text" name="city" class="form-control col-4" placeholder="City" required>
+            <select id="formState" type="text" name="state" class="form-control col-4" placeholder="State" required>
               <option value="0">State</option>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
@@ -196,7 +196,7 @@ header -->
               <option value="WI">Wisconsin</option>
               <option value="WY">Wyoming</option>
             </select>
-            <input id="formName" type="text" class="form-control col-4" placeholder="Zip" required>
+            <input id="formName" type="text" name="zip" class="form-control col-4" placeholder="Zip" required>
           </div>
 
           <label class="hidden">Shop Shirts - S<input type="number" name="shopShirtS" id="hiddenShopShirtS"/></label>
