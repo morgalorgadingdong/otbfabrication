@@ -324,7 +324,6 @@ function submitForm() {
   let coffeeColor = true;
   for (let i = 0; i < items.length; i++) {
     let item = items[i];
-    let qty = item.querySelector('.itemQuantity').value;
     let option = item.querySelector('.itemOption').value;
     if (option == '- size -') {
       shirtSize = false;
@@ -334,7 +333,7 @@ function submitForm() {
   }
   if (shirtSize == false) {
     alert('Please select a size for your shop shirt(s)')
-  } else if (coffeeColor = false) {
+  } else if (coffeeColor == false) {
     alert('Please select a color for your coffee cup(s)')
   } else if (total == 0) {
     alert('Please add something to your order form before submitting')
