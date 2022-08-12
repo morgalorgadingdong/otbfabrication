@@ -233,7 +233,6 @@ function updateTotal() {
   console.log('fired')
   let items = document.getElementsByClassName('orderFormItem')
   let increment = 0;
-  let total = 0
   for (let i = 0; i < items.length; i++) {
     let item = items[i]
     console.log(item)
@@ -333,9 +332,11 @@ function submitForm() {
     }
   }
   if (shirtSize == false) {
-    return alert('Please select a size for your shop shirt(s)')
+    alert('Please select a size for your shop shirt(s)')
   } else if (coffeeColor = false) {
-    return alert('Please select a color for your coffee cup(s)')
+    alert('Please select a color for your coffee cup(s)')
+  } else if (total == 0) {
+    alert('Please add something to your order form before submitting')
   } else {
     document.getElementById('submitBtn').click();
   }
