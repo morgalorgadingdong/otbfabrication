@@ -320,15 +320,23 @@ function updateTotal() {
 
 function submitForm() {
   let items = document.getElementsByClassName('orderFormItem')
+  let shirtSize = true;
+  let coffeeColor = true;
   for (let i = 0; i < items.length; i++) {
     let item = items[i];
     let qty = item.querySelector('.itemQuantity').value;
     let option = item.querySelector('.itemOption').value;
     if (option == '- size -') {
-      return alert('Please select a size for your shop shirt(s)')
+      shirtSize = false;
     } else if (option == '- color -') {
-      return alert('Please select a color for your coffee cup(s)')
+      coffeeColor = false;
     }
   }
-  document.getElementById('submitBtn').click();
+  if (shirtSize == false) {
+    return alert('Please select a size for your shop shirt(s)')
+  } else if (coffeeColor = false) {
+    return alert('Please select a color for your coffee cup(s)')
+  } else {
+    document.getElementById('submitBtn').click();
+  }
 }
