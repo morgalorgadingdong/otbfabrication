@@ -1,20 +1,35 @@
 const shopShirtPrice = 45;
 const coffeeCupPrice = 25;
+const form = document.querySelector('form');
+let total = 0;
 
 // Get the modal
 let modalShopShirt = document.getElementById("modal-shopShirt");
 let modalCoffeeCup = document.getElementById("modal-coffeeCup");
-let modalStickerPack = document.getElementById("modal-stickerPack");
+// let modalStickerPack = document.getElementById("modal-stickerPack");
 
 // Get the button that opens the modal
 let btnShopShirt = document.getElementById("merch-shopShirt-container");
 let btnCoffeeCup = document.getElementById("merch-coffeeCup-container");
-let btnStickerPack = document.getElementById("merch-stickerPack-container");
+// let modalStickerPack = document.getElementById("modal-stickerPack");
+
+document.getElementById('orderFormTotal').innerHTML = total;
+form.addEventListener('input', updateTotal);
+
+// Get the modal
+// let modalShopShirt = document.getElementById("modal-shopShirt");
+// let modalCoffeeCup = document.getElementById("modal-coffeeCup");
+// // let modalStickerPack = document.getElementById("modal-stickerPack");
+
+// // Get the button that opens the modal
+// let btnShopShirt = document.getElementById("merch-shopShirt-container");
+// let btnCoffeeCup = document.getElementById("merch-coffeeCup-container");
+// let btnStickerPack = document.getElementById("merch-stickerPack-container");
 
 // Get the <span> element that closes the modal
 let spanShopShirt = document.getElementsByClassName("close")[0];
 let spanCoffeeCup = document.getElementsByClassName("close")[1];
-let spanStickerPack = document.getElementsByClassName("close")[2];
+// let spanStickerPack = document.getElementsByClassName("close")[2];
 
 // When the user clicks on the button, open the modal
 btnShopShirt.onclick = function() {
@@ -23,9 +38,9 @@ btnShopShirt.onclick = function() {
 btnCoffeeCup.onclick = function() {
   modalCoffeeCup .style.display = "block";
 }
-btnStickerPack.onclick = function() {
-  modalStickerPack.style.display = "block";
-}
+// btnStickerPack.onclick = function() {
+//   modalStickerPack.style.display = "block";
+// }
 
 // When the user clicks on <span> (x), close the modal
 spanShopShirt.onclick = function() {
@@ -35,13 +50,13 @@ spanShopShirt.onclick = function() {
 spanCoffeeCup.onclick = function() {
   modalCoffeeCup.style.display = "none";
 }
-spanStickerPack.onclick = function() {
-  modalStickerPack.style.display = "none";
-}
+// spanStickerPack.onclick = function() {
+//   modalStickerPack.style.display = "none";
+// }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modalShopShirt || event.target == modalCoffeeCup || event.target == modalStickerPack) {
+  if (event.target == modalShopShirt || event.target == modalCoffeeCup) {
     modalShopShirt.style.display = "none";
     modalCoffeeCup.style.display = "none";
     modalStickerPack.style.display = "none";
@@ -64,10 +79,6 @@ function addItem(element) {
   element.value = 0;
 }
 
-
-// const stickerPackPrice = 5;
-
-document.getElementById('orderFormTotal').innerHTML = total
 
 function createShopShirtItem() {
   let outerContainer = document.createElement('div')
@@ -115,6 +126,7 @@ function createShopShirtItem() {
   outerContainer.appendChild(close)
   modalShopShirt.style.display = "none"
   updateTotal()
+  // addEventListers()
 }
 
 function createCoffeeCupItem() {
@@ -161,6 +173,7 @@ function createCoffeeCupItem() {
   outerContainer.appendChild(close)
   modalCoffeeCup.style.display = "none"
   updateTotal()
+  // addEventListers()
 }
 
 function createStickerPackItem() {
@@ -201,6 +214,13 @@ function createStickerPackItem() {
 }
 
 
+// document.addEventListener('click', updateTotal);
+
+// function addEventListers() {
+//   let inputs = document.getElementsByClassName('itemQuantity')
+//   inputs.addEventListener('input', updateTotal)
+// }
+
 
 function removeItem(e) {
   let target = e.target;
@@ -209,44 +229,11 @@ function removeItem(e) {
 }
 
 
-
-const form = document.querySelector('form');
-
-form.addEventListener('input', updateTotal);
-
-
 function updateTotal() {
-  let quantities = document.getElementsByTagName("input");
-  console.log(quantities.length)
-  let total = 0;
-  let increment = 0;
-  let qty = 0
-  for (let i = 0; i < quantities.length; i++) {
-    switch (quantities[i].name) {
-        case 'shopShirtQty':
-          increment = shopShirtPrice
-          qty = quantities[i].value
-          total += qty * increment
-          break;
-        case 'coffeeCupQty':
-          increment = coffeeCupPrice
-          qty = quantities[i].value
-          total += qty * increment
-
-          break;
-        // case 'stickerPackQty':
-        //   increment = stickerPackPrice
-        //   qty = quantities[i].value
-        //   total += qty * increment
-        //   break;
-      }
-  }
-  console.log(shopShirtPrice)
-  document.getElementById('orderFormTotal').innerHTML = total
-};
-
-function submitForm() {
+  console.log('fired')
   let items = document.getElementsByClassName('orderFormItem')
+  let increment = 0;
+  let total = 0
   for (let i = 0; i < items.length; i++) {
     let item = items[i]
     console.log(item)
@@ -254,6 +241,8 @@ function submitForm() {
     let input
     switch (item.querySelector('.itemQuantity').name) {
       case (`shopShirtQty`):
+        increment = shopShirtPrice
+        total += qty * increment 
         let size = item.querySelector('.itemOption').value;
         switch (size) {
           case ('Small'):
@@ -269,12 +258,14 @@ function submitForm() {
             input = document.getElementById('hiddenShopShirtL');
             input.value = qty;
             break;
-            case ('- size -'):
-              return alert('Please select a size for your shop shirt(s)')
+            // case ('- size -'):
+            //   return alert('Please select a size for your shop shirt(s)')
         }
       break;
       case (`coffeeCupQty`):
         let color = item.querySelector('.itemOption').value;
+        increment = coffeeCupPrice
+        total += qty * increment
         switch (color) {
           case ('Black'):
             input = document.getElementById('hiddenCoffeeCupBlack');
@@ -285,16 +276,59 @@ function submitForm() {
             input = document.getElementById('hiddenCoffeeCupWhite');
             input.value = qty;
             break;
-          case ('- color -'):
-            return alert('Please select a color for your coffee cup(s)')
+          // case ('- color -'):
+          //   return alert('Please select a color for your coffee cup(s)')
         }
       break;
 
     }
+    document.getElementById('orderFormTotal').innerHTML = total
+    document.getElementById('hiddenOrderFormTotal').value = total
   }
-  let total = document.getElementById('orderFormTotal').value
-  if (total == 0) {return alert('Please add items to your form before submitting')}
-  document.getElementById('hiddenOrderFormTotal').value = total
   
-  document.getElementById('merchFormSubmit').click();
+  
+  
+  
+//   let quantities = document.getElementsByTagName("input");
+//   console.log(quantities.length)
+//   let total = 0;
+//   let increment = 0;
+//   let qty = 0
+//   for (let i = 0; i < quantities.length; i++) {
+//     switch (quantities[i].name) {
+//         case 'shopShirtQty':
+//           increment = shopShirtPrice
+//           qty = quantities[i].value
+//           total += qty * increment
+//           break;
+//         case 'coffeeCupQty':
+//           increment = coffeeCupPrice
+//           qty = quantities[i].value
+//           total += qty * increment
+
+//           break;
+//         // case 'stickerPackQty':
+//         //   increment = stickerPackPrice
+//         //   qty = quantities[i].value
+//         //   total += qty * increment
+//         //   break;
+//       }
+//   }
+//   console.log(shopShirtPrice)
+//   document.getElementById('orderFormTotal').innerHTML = total
+};
+
+function submitForm() {
+  let items = document.getElementsByClassName('orderFormItem')
+  for (let i = 0; i < items.length; i++) {
+    let item = items[i];
+    let qty = item.querySelector('.itemQuantity').value;
+    let option = item.querySelector('.itemOption').value;
+    if (option == '- size -') {
+      return alert('Please select a size for your shop shirt(s)')
+    } else if (option == '- color -') {
+      return alert('Please select a color for your coffee cup(s)')
+    }
+  }
+  document.getElementById('submitBtn').click();
 }
