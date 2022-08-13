@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Over the boundary fabrication - Bend Oregon" />
-    <meta name="description" content="Custom van builder in Bend Oregon. Camper van, custom van, Sprinter vans, Ford transit, dodge promaster" />
+    <meta name="description" content="Over the boundary fabrication - Custom van builders based out of Bend Oregon" />
+    <meta name="keywords" content="Custom van builder in Bend Oregon. Camper van, custom van, Sprinter vans, Ford transit, dodge promaster" />
     <meta name="author" content="GiddyUp Web Design" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Over The Boundary</title>
@@ -54,7 +54,7 @@ header -->
             <ul class="nav navbar-nav">
               <li class="nav-item"><a class="nav-link" href="our-work.html">Our Work</a></li>
               <li class="nav-item"><a class="nav-link" href="rigs.html">Rigs for sale</a></li>
-              <li class="nav-item"><a class="nav-link" href="merch.html">Merch</a></li>
+              <!-- <li class="nav-item"><a class="nav-link" href="merch.html">Merch</a></li> -->
               <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
@@ -68,38 +68,28 @@ header -->
 
 
 
-<!-- Carousel Landing -->
-<!-- <div class="cover-img" id="landingPageImg-0"> 
-  <div class="container text-center">
-    <div class="owl-carousel blog-arrow" data-nav-arrow="false" data-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1" data-xx-items="1" data-space="15">
-      <h1 class="color-light" id="heroTextH2">Custom built vans to suit your life of adventure</h1>
-    <h5 class="color-light pb-3 pt-3" id="heroTextP">Whether you’re a weekend warrior or looking to dive headfirst into vanlife, we can help make your dreams a reality.</h5>
-    <button onclick="location.href='our-work.html'" class="btn btn-secondary mx-3">See our work</button>
-    <button onclick="location.href='#contact'" class="btn btn-secondary mx-3">Get in touch</button>
-      <div class="item">
-        <div class="cover-img" id="landingPageImg">
-        </div>
-      </div>
-      <div class="item">
-        <div class="cover-img" id="landingPageImg">
-        </div>
-      </div>
-      <div class="item">
-        <div class="cover-img" id="landingPageImg">
-        </div>
-      </div>
-    </div>
-    
+
+<!-- Carousel Landing w/ fade in and fade out-->
+<!-- <div class="slideshow-container">
+  <div class="cover-img mySlides fadeIn" id="landingPageImg2"></div>
+  <div class="cover-img mySlides fadeIn" id="landingPageImg1"></div>
+  <div class="cover-img mySlides fadeIn" id="landingPageImg3"></div>
+  <div class="cover-img mySlides fadeIn" id="landingPageImg4"></div>
+  <div class="cover-img mySlides fadeIn" id="landingPageImg5"></div>
+  <div class="text-center heroTextContainer">
+    <h1 class="color-light" >Custom built vans to suit your life of adventure</h1>
+    <h5 class="color-light pb-3 pt-3" >Whether you’re a weekend warrior or looking to dive headfirst into vanlife, we can help make your van dreams a reality.</h5>
+    <button onclick="location.href='our-work.html'" class="btn btn-secondary mx-3 my-1">See our work</button>
+    <button onclick="location.href='#contact'" class="btn btn-secondary mx-3 my-1">Get in touch</button>
   </div>
-  
 </div> -->
 
 <!-- Static Landing -->
-<div class="cover-img" id="landingPageImg"> 
+<div class="cover-img" id="landingPageImg2"> 
     <div class="container text-center">
       <h1 class="color-light" id="heroTextH2">Custom built vans to suit your life of adventure</h1>
       <h5 class="color-light pb-3 pt-3" id="heroTextP">Whether you’re a weekend warrior or looking to dive headfirst into vanlife, we can help make your dreams a reality.</h5>
-      <button onclick="location.href='our-work.html'" class="btn btn-secondary mx-3 my-1">See our work</button>
+      <button onclick="location.href='#ourWork'" class="btn btn-secondary mx-3 my-1">See our work</button>
       <button onclick="location.href='#contact'" class="btn btn-secondary mx-3 my-1">Get in touch</button>
   </div>
 </div>
@@ -108,7 +98,7 @@ header -->
 
 <!-- What we do -->
 <section id="whatWeDo" class="space-pb pt-3 pt-lg-5">
-    <div class="row section-container">
+    <div class="row section-container flexCenterH">
       <div class="col-md-12 flex-wrap flexSpaceBetweenH">
         <h2 class="oneHundo py-4">Who we are</h2>
         <h6 class="oneHundo pb-5">We're a small team of craftsmen located in Bend Oregon dedicated to helping people bring their custom van dreams to life.</h6>
@@ -128,17 +118,27 @@ header -->
           <h6>We don’t pretend to be experts at everything, that’s why we’ve <a>partnered</a> with some awesome people to ensure every van gets expert attention in every domain.</h6>
         </div>
       </div>
+      <button onclick="location.href='about.html'" class="btn btn-secondary mx-3 my-1">Our Story</button>
     </div>
+    
 </section> 
 
 <section id="ourWork" class="bgSecondary space-pb pt-3 pt-lg-5">
   <div class="row section-container flexCenterH">
     <h2 class="oneHundo py-4 mt-1 whiteText">Our Work</h2>
-    <div class="flexWrap">
+    <div id="ourWorkContainer" class="flexWrap">
+      <div class="card-container col-lg-6 col-md-4 col-sm-6 col-12" style="cursor: pointer;" onclick="location.href='builds/build4.html';">
+        <div id="vanBuild4" class="oneHundo card">
+          <div class="overlay flexCenterV">
+            <p class="overlay-text text-center oneHundo">2018 Mercedes Sprinter</p>
+          </div>
+        </div>
+      </div>
+      
       <div class="card-container col-lg-3 col-md-4 col-sm-6 col-12" style="cursor: pointer;" onclick="location.href='builds/build1.html';">
         <div id="vanBuild1" class="oneHundo card">
           <div class="overlay flexColumn flexCenterH flexCenterH flexWrap">
-            <p class="overlay-text text-center oneHundo">1979 Ford Econoline build</p>
+            <p class="overlay-text text-center oneHundo">1979 Ford Econoline</p>
             <!-- <span class="tag flexCenterV"><p>interior buildout</p><p>layout design</p><p>awning install</p></span> -->
           </div>
         </div>
@@ -157,13 +157,9 @@ header -->
           </div>
         </div>
       </div>
-      <div class="card-container col-lg-3 col-md-4 col-sm-6 col-12" style="cursor: pointer;" onclick="location.href='builds/build4.html';">
-        <div id="vanBuild4" class="oneHundo card">
-          <div class="overlay flexCenterV">
-            <p class="overlay-text text-center oneHundo">2018 Mercedes Sprinter</p>
-          </div>
-        </div>
-      </div>
+      
+      
+      
       <div class="card-container col-lg-3 col-md-4 col-sm-6 col-12" style="cursor: pointer;" onclick="location.href='builds/build8.html';">
         <div id="vanBuild8" class="oneHundo card">
           <div class="overlay flexCenterV">
@@ -171,9 +167,17 @@ header -->
           </div>
         </div>
       </div>
+
+      <div id="specialBuild" class="card-container col-lg-6 col-md-4 col-sm-6 col-12" style="cursor: pointer;" onclick="location.href='builds/build7.html';">
+        <div id="vanBuild7" class="oneHundo card">
+          <div class="overlay flexCenterV">
+            <p class="overlay-text text-center oneHundo">Big Bertha</p>
+          </div>
+        </div>
+      </div>
       
     </div>
-    <button class="btn btn-secondary mx-3 my-4" onclick="location.href='our-work.html';">See all builds</button>
+    <button class="btn btn-primary mx-3 my-4" onclick="location.href='our-work.html';">See all builds</button>
   </div>
 </section>
 
@@ -186,42 +190,42 @@ header -->
     </div>
     
     <div class="col-md-6 col-sm-12 flexCenterH flexWrap">
-    <a class="col-lg-3 col-md-4 col-sm-6 col-12 p-3" href="https://www.crooked-finger.com/" target="_blank"><div id="partner-CFD" class="partnerLogo">
+    <a class="col-lg-3 col-md-4 col-sm-6 col-6 p-3" href="https://www.crooked-finger.com/" target="_blank"><div id="partner-CFD" class="partnerLogo">
       <div class="overlay flexCenterV">
         <p class="overlay-text text-center oneHundo">Crooked Finger Design</p>
       </div>
     </div></a>
-    <a class="col-lg-3 col-md-4 col-sm-6 col-12 p-3" href="https://www.campmugsupply.co/" target="_blank"><div id="partner-CampMug" class="partnerLogo">
+    <a class="col-lg-3 col-md-4 col-sm-6 col-6 p-3" href="https://www.campmugsupply.co/" target="_blank"><div id="partner-CampMug" class="partnerLogo">
       <div class="overlay flexCenterV">
         <p class="overlay-text text-center oneHundo">Camp Mug Supply Co</p>
       </div>
     </div></a>
-    <a class="col-lg-3 col-md-4 col-sm-6 col-12 p-3" href="https://www.autobahncoffee.com/" target="_blank"><div id="partner-AutobahnCoffee" class="partnerLogo">
+    <a class="col-lg-3 col-md-4 col-sm-6 col-6 p-3" href="https://www.autobahncoffee.com/" target="_blank"><div id="partner-AutobahnCoffee" class="partnerLogo">
       <div class="overlay flexCenterV">
         <p class="overlay-text text-center oneHundo">Autobahn Coffee</p>
       </div>
     </div></a>
-    <a class="col-lg-3 col-md-4 col-sm-6 col-12 p-3" href="https://flatlinevanco.com/" target="_blank"><div id="partner-FVC" class="partnerLogo">
+    <a class="col-lg-3 col-md-4 col-sm-6 col-6 p-3" href="https://flatlinevanco.com/" target="_blank"><div id="partner-FVC" class="partnerLogo">
       <div class="overlay flexCenterV">
         <p class="overlay-text text-center oneHundo">Flatline Van Co</p>
       </div>
     </div></a>
-    <a class="col-lg-3 col-md-4 col-sm-6 col-12 p-3" href="https://ubco.com/" target="_blank"><div id="partner-UBCO" class="partnerLogo">
+    <a class="col-lg-3 col-md-4 col-sm-6 col-6 p-3" href="https://ubco.com/" target="_blank"><div id="partner-UBCO" class="partnerLogo">
       <div class="overlay flexCenterV">
         <p class="overlay-text text-center oneHundo">UBCO</p>
       </div>
     </div></a>
-    <a class="col-lg-3 col-md-4 col-sm-6 col-12 p-3" href="https://landedgear.com/" target="_blank"><div id="partner-LandedGear" class="partnerLogo">
+    <a class="col-lg-3 col-md-4 col-sm-6 col-6 p-3" href="https://landedgear.com/" target="_blank"><div id="partner-LandedGear" class="partnerLogo">
       <div class="overlay flexCenterV">
         <p class="overlay-text text-center oneHundo">Landed Gear</p>
       </div>
     </div></a>
-    <a class="col-lg-3 col-md-4 col-sm-6 col-12 p-3" href="https://adventurewagon.com/" target="_blank"><div id="partner-AdventureWagon" class="partnerLogo">
+    <a class="col-lg-3 col-md-4 col-sm-6 col-6 p-3" href="https://adventurewagon.com/" target="_blank"><div id="partner-AdventureWagon" class="partnerLogo">
       <div class="overlay flexCenterV">
         <p class="overlay-text text-center oneHundo">Adventure Wagon</p>
       </div>
     </div></a>
-    <a class="col-lg-3 col-md-4 col-sm-6 col-12 p-3" href="https://giddyup.netlify.app" target="_blank"><div id="partner-GiddyUp" class="partnerLogo">
+    <a class="col-lg-3 col-md-4 col-sm-6 col-6 p-3" href="https://giddyup.netlify.app" target="_blank"><div id="partner-GiddyUp" class="partnerLogo">
       <div class="overlay flexCenterV">
         <p class="overlay-text text-center oneHundo">GiddyUp Web Design</p>
       </div>
@@ -241,18 +245,18 @@ header -->
     </div>
     <div class="row justify-content-center text-center mt-5">
       <div class="col-lg-6">
-        <form>
+        <form method="POST" netlify>
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Your Name">
+            <input name="name" type="text" class="form-control" placeholder="Your Name">
           </div>
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Your Email">
+            <input name="email" type="email" class="form-control" placeholder="Your Email">
           </div>
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Subject">
+            <input name="subject" type="text" class="form-control" placeholder="Subject">
           </div>
           <div class="mb-3">
-            <textarea class="form-control" placeholder="Your Message" rows="4"></textarea>
+            <textarea name="message" class="form-control" placeholder="Your Message" rows="4"></textarea>
           </div>
           <div class="d-grid flexCenterH">
             <button type="submit" class="btn btn-primary">Send Message</button>
@@ -321,7 +325,7 @@ Back To Top-->
 
 <!--=================================
 Javascript -->
-
+<script src="js/carousel.js"></script>
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/popper/popper.min.js"></script>
   <script src="js/bootstrap/bootstrap.min.js"></script>
@@ -333,8 +337,10 @@ Javascript -->
   <script src="js/swiper/swiper.min.js"></script>
   <script src="js/swiperanimation/SwiperAnimation.min.js"></script>
   <script src="js/instagramFeed/jquery.instagramFeed.min.js"></script>
+  <script src="js/flickity.js"></script>
 
   <script src="js/custom.js"></script>
+  
 
 </body>
 </html>

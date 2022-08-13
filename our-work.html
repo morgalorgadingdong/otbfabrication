@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Over the boundary fabrication - Bend Oregon" />
-    <meta name="description" content="Custom van builder in Bend Oregon. Camper van, custom van, Sprinter vans, Ford transit, dodge promaster" />
+    <meta name="description" content="Over the boundary fabrication - Custom van builders based out of Bend Oregon" />
+    <meta name="keywords" content="Custom van builder in Bend Oregon. Camper van, custom van, Sprinter vans, Ford transit, dodge promaster" />
     <meta name="author" content="GiddyUp Web Design" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Over The Boundary</title>
@@ -54,7 +54,7 @@ header -->
             <ul class="nav navbar-nav">
               <li class="nav-item"><a class="nav-link active" href="our-work.html">Our Work</a></li>
                 <li class="nav-item"><a class="nav-link" href="rigs.html">Rigs for sale</a></li>
-                <li class="nav-item"><a class="nav-link" href="merch.html">Merch</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="merch.html">Merch</a></li> -->
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
@@ -65,12 +65,15 @@ header -->
 </header>
 <!--=================================
  header -->
-
-
+ <!-- <section id="services" class=" space-pb pt-3 pt-lg-5">
+  <div class="row section-container flexCenterH">
+    <h2 class="oneHundo py-4 mt-1">Services</h2>
+  </div>
+</section> -->
 
  <section id="ourWork" class="bgSecondary space-pb pt-3 pt-lg-5">
   <div class="row section-container flexCenterH">
-    <h2 class="oneHundo py-4 mt-1 whiteText">Our Work</h2>
+    <h2 class="oneHundo py-4 mt-1 whiteText">Past Builds</h2>
     <div class="flexWrap">
       <div class="card-container col-lg-3 col-md-4 col-sm-6 col-12" style="cursor: pointer;" onclick="location.href='builds/build1.html';">
         <div id="vanBuild1" class="oneHundo card">
@@ -108,6 +111,14 @@ header -->
           </div>
         </div>
       </div>
+
+      <div id="" class="card-container col-lg-3 col-md-4 col-sm-6 col-12" style="cursor: pointer;" onclick="location.href='builds/build7.html';">
+        <div id="vanBuild7" class="oneHundo card">
+          <div class="overlay flexCenterV">
+            <p class="overlay-text text-center oneHundo">Big Bertha</p>
+          </div>
+        </div>
+      </div>
       
     </div>
   </div>
@@ -125,18 +136,18 @@ header -->
     </div>
     <div class="row justify-content-center text-center mt-5">
       <div class="col-lg-6">
-        <form>
+        <form method="POST" netlify>
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Your Name">
+            <input name="name" type="text" class="form-control" placeholder="Your Name">
           </div>
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Your Email">
+            <input name="email" type="email" class="form-control" placeholder="Your Email">
           </div>
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Subject">
+            <input name="subject" type="text" class="form-control" placeholder="Subject">
           </div>
           <div class="mb-3">
-            <textarea class="form-control" placeholder="Your Message" rows="4"></textarea>
+            <textarea name="message" class="form-control" placeholder="Your Message" rows="4"></textarea>
           </div>
           <div class="d-grid flexCenterH">
             <button type="submit" class="btn btn-primary">Send Message</button>
