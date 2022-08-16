@@ -58,7 +58,8 @@
   --color-light: #ffffff; 
   --color-selected-primary: #765A33;  
   --color-selected-secondary: rgba(52,63,49);
-  --main-font: 'Heebo', sans-serif;
+  --main-font: 'Lekton', sans-serif;
+  --paragraph-font: 'Heebo', sans-serif;
 }
 
 body {
@@ -90,8 +91,7 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
   font-family: var(--main-font);
   font-weight: normal;
   color: var(--color-dark);
@@ -103,6 +103,13 @@ h6 {
   h5 a,
   h6 a {
     color: inherit; }
+
+h6, p {
+  font-family: var(--paragraph-font);
+  font-weight: normal;
+  color: var(--color-dark);
+  margin-top: 0px;
+}
 
 label {
   font-weight: normal; }
@@ -2574,7 +2581,7 @@ input[type="radio"]:radio {
 
 .navbar .navbar-nav .nav-link {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 24px;
   padding: 10px 20px;
   color: var(--color-dark);
   text-transform: uppercase;

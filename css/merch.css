@@ -1,9 +1,27 @@
-#merch-shopShirt, #modal-merch-shopShirt {
-    background-image: url('../images/merch/shop-shirt.JPG');
+#merch-shopShirt1 {
+    background-image: url('../images/merch/shopshirt-1.jpg');
+}
+#merch-shopShirt2 {
+  background-image: url('../images/merch/shopshirt-2.jpg');
+}
+#merch-shopShirt3 {
+  background-image: url('../images/merch/shopshirt-3.jpg');
 }
 
-#merch-coffeeCup {
-    background-image: url('../images/merch/coffee-cup.jpg');
+#merch-coffeeCup1 {
+    background-image: url('../images/merch/mug-1.jpg');
+}
+
+#merch-coffeeCup2 {
+  background-image: url('../images/merch/mug-2.jpg');
+}
+
+#merch-coffeeCup3 {
+  background-image: url('../images/merch/mug-3.jpg');
+}
+
+#merch-coffeeCup4 {
+  background-image: url('../images/merch/mug-4.jpg');
 }
 
 #merch-tShirt {
