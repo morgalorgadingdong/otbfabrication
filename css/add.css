@@ -6,7 +6,7 @@
   --color-mid: rgba(204, 196, 185);
   --color-light: #ffffff; 
   --color-selected-primary: #765A33;  
-  --color-selected-secondary: rgba(52,63,49);
+  --color-selected-secondary: #343f31;
   --main-font: 'Lekton', sans-serif;
   --paragraph-font: 'Heebo', sans-serif;
 } */
@@ -17,11 +17,14 @@ header > .row > .col-md-12 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
 }
 
 #whatWeDo h4 {
   margin-top: .5rem;
+}
+
+#whatWeDo img {
+  filter: invert(24%) sepia(8%) saturate(1021%) hue-rotate(62deg) brightness(88%) contrast(93%);
 }
 
 
