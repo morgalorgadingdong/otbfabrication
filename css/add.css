@@ -543,5 +543,13 @@ header > .row > .col-md-12 {
     #ourWorkContainer {
       max-height: 65vw;
     }
+
+  }
+
+  @media (max-width: 991px) { 
+    #pastBuilds {
+      background-color: var(--color-mid);
+    }
+
   }
  

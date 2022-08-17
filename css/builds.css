@@ -22,6 +22,10 @@
     background-image: url('../images/builds/build8.jpg');
   }
 
+  #vanBuild9 {
+    background-image: url('../images/builds/build9.jpg');
+  }
+
   .tag {
     margin: 5px;
     line-height: 2rem;
