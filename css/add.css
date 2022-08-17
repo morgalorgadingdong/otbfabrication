@@ -531,42 +531,9 @@ header > .row > .col-md-12 {
 }
 
 
-
-  @keyframes fade {
-    0%,100% { opacity: 0; }
-    20% { opacity: 1; }
-    80% { opacity: 1; }
-  }
-
-  @-moz-keyframes fade {
-    0%,100% { opacity: 0; }
-    20% { opacity: 1; }
-    80% { opacity: 1; }
-  }
-  
-  @-webkit-keyframes fade {
-    0%,100% { opacity: 0; }
-    20% { opacity: 1; }
-    80% { opacity: 1; }
-  }
-  
-  @-ms-keyframes fade {
-    0%,100% { opacity: 0; }
-    20% { opacity: 1; }
-    80% { opacity: 1; }
-  }
-
-  @-o-keyframes fade {
-    0%,100% { opacity: 0; }
-    20% { opacity: 1; }
-    80% { opacity: 1; }
-  }
-
-
-/* 
-  .card-container.col-lg-6 {
-    aspect-ratio: 2 / 1;
-  } */
+.hidden {
+  display: none;
+}
 
   @media screen and (min-width: 992px) {
     #specialBuild {
