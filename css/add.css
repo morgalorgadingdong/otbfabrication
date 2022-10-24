@@ -425,9 +425,11 @@ header > .row > .col-md-12 {
 
   #partner-GiddyUp {
     box-sizing: border-box;
-    background-image: url('../images/partners/giddyup2.PNG');
+    background-image: url('../images/partners/giddyup-new-crest2.png');
     background-size: contain;
     border: #0A1931 solid 3px;
+    padding: 0;
+    background-color: #1C2837;
   }
 
   .partnerLogo {

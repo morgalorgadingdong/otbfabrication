@@ -1,13 +1,3 @@
-/*
-
-Template: Xberg - Multipurpose Blog HTML Template
-Author: potenzaglobalsolutions
-Design and Developed by: potenzaglobalsolutions.com
-
-NOTE: This file contains all scripts for the actual Template.
-
-*/
-
 /*================================================
 [  Table of contents  ]
 ================================================
